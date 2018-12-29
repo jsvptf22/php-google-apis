@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form enctype="multipart/form-data" method="post" action="./backend/backend.php">
+        <input name="media" type="file" id="archivo" multiple />
+        <input name="title" type="text">
+        <input id="enviar" class="button" type="submit" alt="Upload" value="Upload" />
+    </form>
+    <a href="./backend/setCalendarAccess.php">almacenar en google</a>
+</body>
+<!--<script src="./node_modules/jquery/dist/jquery.min.js"></script>-->
+<!--<script>
+    $(function () {
+        $("#enviar").click(function () {
+            var data = new FormData();
+            jQuery.each($('#archivo')[0].files, function (i, file) {
+                data.append('archivo', file);
+            });
+            $.ajax({
+                type: 'POST',
+                data: data,
+                url: 'backend/backend.php',
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    console.log(data);
+                    
+                }
+            });
+        });
+    });
+</script>
+-->
+</body>
+
+</html>
